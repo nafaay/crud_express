@@ -36,9 +36,13 @@ const breads = {
 }
 
 app.use(morgan('dev'));
-
+app.set('view engine', 'ejs');
+const templateVars = {
+  breads: breads
+}
 app.get('/breads', (req, res) => {
-  res.json(breads);
+  // res.json(breads);
+  res.render('browse', templateVars)
 })
 
 app.listen(port, () => {

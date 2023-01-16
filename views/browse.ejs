@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breads!</title>
+</head>
+
+<body style="background-color: bisque;">
+  <h2>All The Breads</h2>
+  <% for(breadKey in breads){ %>
+    <p>
+      <%= breads[breadKey].name %>
+        <%= breads[breadKey].yeast %>
+          <%= breads[breadKey].flour %>
+            <%= breads[breadKey].expiryDate %>
+
+    </p>
+    <% }%>
+
+</body>
+
+</html>
