@@ -1,0 +1,16 @@
+{
+  "name": "crud01",
+  "version": "1.0.0",
+  "description": "- [] Implement CRUD over HTTP with Express -\r - [] Render Data for the user using EJS templates\r - [] Use forms to submit HTTP requests\r - [] Explore the Post-Redirect-Get pattern\r - [] Using Chrome tools to see requests and responses\r - [] Practice debugging Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  }
+}
