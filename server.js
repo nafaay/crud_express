@@ -37,13 +37,25 @@ const breads = {
 
 app.use(morgan('dev'));
 app.set('view engine', 'ejs');
-const templateVars = {
-  breads: breads
-}
+// Browse All Breads
 app.get('/breads', (req, res) => {
   // res.json(breads);
+  const templateVars = {
+    breads: breads,
+  }
   res.render('browse', templateVars)
 })
+
+// Read One Specific Bread
+app.get('/breads/:breadId', (req, res) => {
+
+  const breadId = breads[req.params.breadId];
+  const templateVars = {
+    bread: breadId
+  }
+  res.render('read', templateVars)
+})
+
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);

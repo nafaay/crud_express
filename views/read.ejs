@@ -5,20 +5,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Breads!</title>
+  <title>Bread</title>
 </head>
 
 <body style="background-color: bisque;">
   <h2>All The Breads</h2>
-  <% for(const breadKey in breads){ %>
+  <% if(bread) {%>
     <div>
-      <h2>Name: <%= breads[breadKey].name %>
-          Yeast: <%= breads[breadKey].yeast %>
-            Flour: <%= breads[breadKey].flour %>
-              Expiry Date: <%= breads[breadKey].expiryDate %>
+      <h2>
+        Name: <%= bread.name %>
+          Yeast: <%= bread.yeast %>
+            Flour: <%= bread.flour %>
+              Expiry Date: <%= bread.expiryDate %>
       </h2>
     </div>
-    <% }%>
+    <% } else { %>
+      <div>
+        <h2> No Bread found</h2>
+      </div>
+      <% } %>
+
 </body>
 
 </html>
